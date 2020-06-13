@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE29C0932494924200AAB9B9 /* myPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE29C0922494924200AAB9B9 /* myPhoto.swift */; };
 		D28C287D2488C09700C036CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C287C2488C09700C036CD /* AppDelegate.swift */; };
 		D28C287F2488C09700C036CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28C287E2488C09700C036CD /* SceneDelegate.swift */; };
 		D28C28842488C09700C036CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28C28822488C09700C036CD /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE29C0922494924200AAB9B9 /* myPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPhoto.swift; sourceTree = "<group>"; };
 		D28C28792488C09700C036CD /* To-Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28C287C2488C09700C036CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28C287E2488C09700C036CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				D28C287E2488C09700C036CD /* SceneDelegate.swift */,
 				D28C28822488C09700C036CD /* Main.storyboard */,
 				D28C28902488D48400C036CD /* TableViewController.swift */,
+				AE29C0922494924200AAB9B9 /* myPhoto.swift */,
 				D2BC113124938875001A44FA /* Bookclass.swift */,
 				D28C28852488C09B00C036CD /* Assets.xcassets */,
 				D28C288A2488C09B00C036CD /* Info.plist */,
@@ -144,6 +147,7 @@
 				D28C28912488D48400C036CD /* TableViewController.swift in Sources */,
 				D2BC113224938875001A44FA /* Bookclass.swift in Sources */,
 				D2BC11302493860D001A44FA /* MyDataStruct.swift in Sources */,
+				AE29C0932494924200AAB9B9 /* myPhoto.swift in Sources */,
 				D28C287F2488C09700C036CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

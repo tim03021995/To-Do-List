@@ -58,25 +58,21 @@
                                 <rect key="frame" x="35" y="59" width="364" height="788"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-Bw-hDO">
-                                        <rect key="frame" x="36.5" y="1" width="291" height="206"/>
+                                        <rect key="frame" x="36.5" y="1" width="291" height="351"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" image="YES"/>
                                         </accessibility>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91G-Ql-2gB">
-                                        <rect key="frame" x="159" y="289.5" width="46" height="209"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1fo-vY-ECW">
-                                        <rect key="frame" x="0.0" y="579.5" width="364" height="208.5"/>
+                                        <rect key="frame" x="0.0" y="434.5" width="364" height="353.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="unknow" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-ZM-grF">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="187.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tqa-41-5RS">
-                                                <rect key="frame" x="0.0" y="50.5" width="364" height="158"/>
+                                                <rect key="frame" x="0.0" y="195.5" width="364" height="158"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>

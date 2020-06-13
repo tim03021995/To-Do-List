@@ -10,13 +10,19 @@ import UIKit
 
 class Bookclass: UIViewController {
     let  imagePicker = UIImagePickerController()
+   
 
     override func viewDidLoad() {
+         let singleFinger = UITapGestureRecognizer(
+         target:self,
+         action:#selector(Bookclass.singleTap(recognizer:)))
         myPhoto.image  = myTask[reRow!].image ?? UIImage(systemName: "plus.rectangle")
         myPhoto.layer.cornerRadius = myPhoto.frame.height*0.2
         myPhoto.layer.shadowOffset = CGSize(width: 10, height: 10)
         myPhoto.layer.shadowRadius = myPhoto.frame.height*0.2
         myPhoto.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        myPhoto.isUserInteractionEnabled = true
+        myPhoto.addGestureRecognizer(singleFinger)
         myText.text = myTask[reRow!].text ?? "請輸入文字"
         myTitle.text = myTask[reRow!].title
         view.backgroundColor = myTask[reRow!].bgcolor ?? nil
@@ -58,5 +64,19 @@ extension Bookclass: UIImagePickerControllerDelegate,UINavigationControllerDeleg
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)//將相片存擋
         print("照片存擋")
             dismiss(animated: true, completion: nil)
+    }
+}
+extension Bookclass{
+    
+    @objc func singleTap(recognizer:UITapGestureRecognizer){
+        imagePicker.sourceType = .camera
+               imagePicker.cameraDevice = .rear
+               imagePicker.cameraCaptureMode = .photo
+               imagePicker.cameraFlashMode = .off
+               imagePicker.imageExportPreset = .compatible
+               show(imagePicker, sender: self)
+               print("Open Camera")
+        print("單指連點一下時觸發")
+
     }
 }
