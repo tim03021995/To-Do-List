@@ -2,7 +2,6 @@ import UIKit
 
 class TableViewController: UITableViewController{
     //  var myTask = ["string1","string2","string3"]
-    var myTask = [String]()
     
     
     // MARK: - ViewDidLoad
@@ -27,9 +26,9 @@ class TableViewController: UITableViewController{
             let msg = controller.textFields?[0].text
             if (msg != nil)
             {
-                self.myTask.append(msg!)
+                myTask.append(Data(title: msg!, text: nil, image: nil, bgcolor: color.colorRezen()))
                 print("save \(msg!)")
-                print(self.myTask.count)
+                print(myTask.count)
                 self.tableView.reloadData()
             }else{
                 print("is nil")
@@ -41,33 +40,40 @@ class TableViewController: UITableViewController{
         present (controller, animated: true, completion: nil)
     }
     //MARK: -LifeCircle
+    
+    // MARK: -Funtion
+    let sb = UIViewController(nibName: "book", bundle: nil)
+}
+
+extension TableViewController{
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "删除") {
             (action, view, completionHandler) in
             print(indexPath.row)
-            self.myTask.remove(at: indexPath.row)
+            myTask.remove(at: indexPath.row)
             self.tableView.reloadData()
             completionHandler(true)
         }
         let configuration = UISwipeActionsConfiguration(actions: [delete])
         return configuration
     }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        reRow = indexPath.row
         if let controller =
             storyboard?.instantiateViewController(withIdentifier: "secondPage"){
             present(controller, animated: true, completion: nil)
         }
-        print(self.myTask[indexPath.row])
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myTask.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = myTask[indexPath.row]
+        cell.textLabel?.text = myTask[indexPath.row].title
         return cell
     }
-    // MARK: -Funtion
-    let sb = UIViewController(nibName: "book", bundle: nil)
 }

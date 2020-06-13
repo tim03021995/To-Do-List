@@ -58,18 +58,25 @@
                                 <rect key="frame" x="35" y="59" width="364" height="788"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-Bw-hDO">
-                                        <rect key="frame" x="170" y="1" width="24" height="351"/>
+                                        <rect key="frame" x="36.5" y="1" width="291" height="206"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91G-Ql-2gB">
+                                        <rect key="frame" x="159" y="289.5" width="46" height="209"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1fo-vY-ECW">
-                                        <rect key="frame" x="0.0" y="434.5" width="364" height="353.5"/>
+                                        <rect key="frame" x="0.0" y="579.5" width="364" height="208.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="unknow" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfe-ZM-grF">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="42.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tqa-41-5RS">
-                                                <rect key="frame" x="0.0" y="39.5" width="364" height="314"/>
+                                                <rect key="frame" x="0.0" y="50.5" width="364" height="158"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -79,15 +86,18 @@
                                             </textView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Lfe-ZM-grF" firstAttribute="height" secondItem="tqa-41-5RS" secondAttribute="height" multiplier="0.1" id="bQY-nn-R5z"/>
+                                            <constraint firstItem="Lfe-ZM-grF" firstAttribute="width" secondItem="tqa-41-5RS" secondAttribute="width" id="pfy-mK-fhV"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="oxa-Bw-hDO" firstAttribute="width" secondItem="ES0-3V-4at" secondAttribute="width" multiplier="0.8" id="t9t-ng-VWx"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tqa-41-5RS" firstAttribute="width" secondItem="zfO-q1-8co" secondAttribute="width" multiplier="0.879227" id="RS7-qP-ZQJ"/>
+                            <constraint firstItem="tqa-41-5RS" firstAttribute="width" secondItem="JpJ-nM-vgU" secondAttribute="width" multiplier="0.879227" id="GLq-WK-QJO"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ES0-3V-4at" secondAttribute="bottom" constant="15" id="WTk-n9-htg"/>
                             <constraint firstItem="ES0-3V-4at" firstAttribute="top" secondItem="JpJ-nM-vgU" secondAttribute="top" constant="15" id="i4F-W2-f4M"/>
                             <constraint firstItem="ES0-3V-4at" firstAttribute="leading" secondItem="zfO-q1-8co" secondAttribute="leadingMargin" constant="15" id="oOf-fh-dBx"/>
@@ -96,6 +106,11 @@
                         <viewLayoutGuide key="safeArea" id="JpJ-nM-vgU"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iov-go-2yH"/>
+                    <connections>
+                        <outlet property="myPhoto" destination="oxa-Bw-hDO" id="GYY-um-Dd3"/>
+                        <outlet property="myText" destination="tqa-41-5RS" id="bkN-lI-7EH"/>
+                        <outlet property="myTitle" destination="Lfe-ZM-grF" id="ijb-7o-Ofn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5i3-kf-EkW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +126,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dh1-pA-tiu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="bFx-le-7dE" kind="relationship" relationship="rootViewController" id="MhP-K7-pNo"/>
                     </connections>
