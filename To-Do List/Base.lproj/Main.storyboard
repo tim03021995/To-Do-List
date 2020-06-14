@@ -58,7 +58,7 @@
                                 <rect key="frame" x="35" y="59" width="364" height="788"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-Bw-hDO">
-                                        <rect key="frame" x="36.5" y="1" width="291" height="351"/>
+                                        <rect key="frame" x="0.0" y="1" width="364" height="351"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" image="YES"/>
                                         </accessibility>
@@ -87,7 +87,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="oxa-Bw-hDO" firstAttribute="width" secondItem="ES0-3V-4at" secondAttribute="width" multiplier="0.8" id="t9t-ng-VWx"/>
+                                    <constraint firstItem="oxa-Bw-hDO" firstAttribute="width" secondItem="ES0-3V-4at" secondAttribute="width" id="t9t-ng-VWx"/>
                                 </constraints>
                             </stackView>
                         </subviews>

@@ -11,6 +11,12 @@ class TableViewController: UITableViewController{
         print(myTask.count)
         super.viewDidLoad()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
+        self.tableView.reloadData()
+        super.viewDidAppear(animated)
+        
+    }
     // MARK: IBAtion
     @IBAction func addItem(_ sender: Any) {
         myAlert()
@@ -59,20 +65,23 @@ extension TableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        	
         reRow = indexPath.row
         if let controller =
             storyboard?.instantiateViewController(withIdentifier: "secondPage"){
             present(controller, animated: true, completion: nil)
         }
-    }
-    
+    }	
+    //每個Section裡面會有幾列
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myTask.count
     }
+//    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.text = myTask[indexPath.row].title    }
+    //設定cell要顯示的內容
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
         cell.textLabel?.text = myTask[indexPath.row].title
         return cell
     }
