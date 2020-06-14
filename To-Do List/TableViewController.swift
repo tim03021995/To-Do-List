@@ -15,7 +15,6 @@ class TableViewController: UITableViewController{
         print("viewDidAppear")
         self.tableView.reloadData()
         super.viewDidAppear(animated)
-        
     }
     // MARK: IBAtion
     @IBAction func addItem(_ sender: Any) {
